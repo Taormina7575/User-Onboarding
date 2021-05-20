@@ -58,10 +58,12 @@ function App() {
 
     setFormValues({
       ...formValues,
-      [name]: value,
+      [name]: valueToUse,
     });
   };
 
+
+  console.log(formValues)
   useEffect(() => {
     schema.isValid(formValues).then((valid) => {
       setDisabled(!valid);

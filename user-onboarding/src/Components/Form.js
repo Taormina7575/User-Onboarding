@@ -77,11 +77,11 @@ export default function Form({submit, formValues, formErrors, change, disabled})
           <NewInput
             type="checkbox"
             name="terms"
-            value={formValues.terms}
+            checked={formValues.terms}
             onChange={change}
           ></NewInput>
         </FormLabel>
-        <Submit disabled={disabled}>Submit</Submit>
+        <Submit disabled={disabled} id={'subBtn'}>Submit</Submit>
         <Errors>
           <p>{formErrors.name}</p>
           <p>{formErrors.email}</p>

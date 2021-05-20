@@ -10,7 +10,8 @@ export default yup.object().shape({
     .email("must be a valid email")
     .required("email is required"),
   terms: yup
-   .boolean(),
+    .boolean()
+    .oneOf([true], 'terms must be accepted'),
   password: yup
     .string()
     .required('password is required')
